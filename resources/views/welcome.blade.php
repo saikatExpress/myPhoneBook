@@ -23,6 +23,10 @@
     </style>
 
     <style>
+        .phonebook {
+            background-color: teal;
+        }
+
         .phonebook ul {
             display: inline-flex;
             list-style: none
@@ -30,7 +34,35 @@
 
         .phonebook ul li {
             padding: 8px 10px 8px;
-            margin: 10px 10px 10px;
+            margin: 10px 20px 0px;
+        }
+
+        .phonebook ul li a {
+            color: #fff;
+            padding: 10px 100px 10px;
+            text-decoration: none;
+        }
+
+        .myContact_list {
+            background-color: whitesmoke;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .myContact_list tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .myContact_list tr th {
+            padding: 10px;
+            text-align: center
+        }
+
+        .myContact_list tr td {
+            padding: 10px;
+            text-align: center
         }
     </style>
 
@@ -39,16 +71,50 @@
 <body class="antialiased">
 
     <header>
-        <div class="container">
-            <div class="phonebook">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="{{ URL('addcontact') }}">Add Contact</a></li>
-                </ul>
-            </div>
+        <div class="phonebook">
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/about') }}">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{{ url('/addcontact') }}">Add Contact</a></li>
+            </ul>
         </div>
+        <div class="myContact_list">
+            <table style="width:100%">
+                <tr>
+                    <th>SL</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Saikat Talukder</td>
+                    <td>saikat@gmail.com</td>
+                    <td>01713-617913</td>
+                    <td>View/Delete</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Akash Talukder</td>
+                    <td>akash@gmail.com</td>
+                    <td>01613-617913</td>
+                    <td>View/Delete</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Saibal Talukder</td>
+                    <td>saibal@gmail.com</td>
+                    <td>01913-617913</td>
+                    <td>View/Delete</td>
+                </tr>
+            </table>
+        </div>
+
     </header>
 
     {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
