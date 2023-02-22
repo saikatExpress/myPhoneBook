@@ -54,7 +54,7 @@
                 <label for="email">Add Email</label> <br>
                 <input type="text" name="email" id=""> <br>
                 <label for="number">Add Number</label> <br>
-                <input type="text" name="number"> <br>
+                <input type="text" name="phone_number"> <br>
                 <input type="submit" name="submit" value="Submit">
             </form>
         </div>

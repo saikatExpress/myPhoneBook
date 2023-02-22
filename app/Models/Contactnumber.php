@@ -33,7 +33,7 @@ class Contactnumber extends Model
         'id'                => 'integer',
         'name'              => 'string',
         'email'             => 'string',
-        'phone_number'      => 'integer',
+        'phone_number'      => 'string',
         'email_verified_at' => 'datetime',
         'created_at'        => 'timestamp',
         'updated_at'        => 'timestamp',

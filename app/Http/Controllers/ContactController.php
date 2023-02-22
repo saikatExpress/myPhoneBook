@@ -29,7 +29,7 @@ class ContactController extends Controller
         $validator = Validator::make($request->all(), [
             'name'         => ['required', 'string', 'max:50', 'min:2', 'unique:contactnumbers'],
             'email'        => ['required', 'email:rfc,dns'],
-            'phone_number' => ['reqiured', 'numeric', 'min:10']
+            'phone_number' => ['reqiured', 'string', 'min:10', 'max:12']
         ]);
 
         $name        = $request->input('name');
