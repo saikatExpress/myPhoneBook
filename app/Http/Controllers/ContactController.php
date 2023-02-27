@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Contactnumber;
 use Illuminate\Support\Facades\Validator;
@@ -15,7 +16,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = DB::table('contactnumbers')->get();
+        return $contacts;
     }
 
     /**
